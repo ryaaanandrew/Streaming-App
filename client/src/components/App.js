@@ -1,10 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { StreamCreate, StreamDelete, StreamEdit, StreamShow, StreamList } from './streams';
+import { Header } from './common';
 
 const App = () => {
     return (
         <BrowserRouter>
+            <Header />
             <div>
                 <Route path='/' exact component={StreamList} />
                 <Route path='/streams/new' exact component={StreamCreate} />
