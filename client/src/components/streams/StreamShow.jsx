@@ -4,4 +4,4 @@ const StreamShow = () => {
     return <div>Stream Show</div>
 };
 
-export { StreamShow };
+export default StreamShow;

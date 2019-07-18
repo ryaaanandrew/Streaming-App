@@ -4,4 +4,4 @@ const StreamDelete = () => {
     return <div>Stream Delete</div>
 };
 
-export { StreamDelete };
+export default StreamDelete;

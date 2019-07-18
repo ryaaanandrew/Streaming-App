@@ -13,17 +13,14 @@ class GoogleAuth extends Component {
 
                 this.onAuthChange(this.auth.isSignedIn.get())
                 this.auth.isSignedIn.listen(this.onAuthChange)
-            })
+            });
         });
     };
 
     onAuthChange = (isSignedIn) => {
-        console.log('isSignedIn: ', isSignedIn);
         if (isSignedIn) {
-            console.log('hit true in auth change')
-            this.props.signIn();
+            this.props.signIn(this.auth.currentUser.get().getId());
         } else {
-            console.log('hit false')
             this.props.signOut();
         }
     }
