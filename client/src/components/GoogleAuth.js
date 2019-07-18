@@ -4,9 +4,11 @@ import { signIn, signOut } from '../actions/';
 
 class GoogleAuth extends Component {
     componentDidMount() {
+        const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+
         window.gapi.load('client:auth2', () => {
             window.gapi.client.init({
-                clientId: '345129407507-4k4t5ve38er54dk782f9e902uc41o8j5.apps.googleusercontent.com',
+                clientId: GOOGLE_API_KEY,
                 scope: 'email'
             }).then(() => {
                 this.auth = window.gapi.auth2.getAuthInstance();
@@ -62,7 +64,6 @@ class GoogleAuth extends Component {
 };
 
 const mapStateToProps = state => {
-    console.log('mapStateToProps: ', state);
     return {
         isSignedIn: state.auth.isSignedIn
     }
