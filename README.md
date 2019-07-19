@@ -8,7 +8,7 @@ A single page streaming app built using React/Redux/Oauth/JSON-server/rtmp & nod
 2 cd back into the root folder
 3 npm run start
 
-### Connecting to OBS:
+### Connecting through OBS:
 1 Open OBS and start a streaming session
 2 Go to settings > stream 
 3 Under service, choose custom
