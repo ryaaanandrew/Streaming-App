@@ -17,5 +17,6 @@ A single page streaming app built using React/Redux/Oauth/JSON-server/rtmp & nod
 # TODO
 - Styling
 - Switch back end to Go
+- Host
 - Internal User database
 - Refactor into hooks(?)
