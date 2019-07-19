@@ -11,9 +11,11 @@ class StreamDelete extends Component {
     }
 
     renderActions = () => {
+        const { id } = this.props.match.params;
+        
         return (
             <>
-                <button onClick={this.props.deleteStream(this.props.match.params.id)} className="ui button negative">Delete</button>
+                <button onClick={() => this.props.deleteStream(id)} className="ui button negative">Delete</button>
                 <Link to='/' className="ui button">Cancel</Link>
             </>
         )
