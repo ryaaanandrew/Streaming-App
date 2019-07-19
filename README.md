@@ -9,10 +9,10 @@ A single page streaming app built using React/Redux/Oauth/JSON-server/rtmp & nod
 3 npm run start
 
 ### Connecting through OBS:
-1 Open OBS and start a streaming session
-2 Go to settings > stream 
-3 Under service, choose custom
-4 Your stream key will be the route id 'http://localhost:3000/streams/show/1**
+1. Open OBS and start a streaming session
+2. Go to settings > stream 
+3. Under service, choose custom
+4. Your stream key will be the route id 'http://localhost:3000/streams/show/1**
 
 # TODO
 - Styling
