@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchStreams } from '../../actions';
 
-class StreamList extends React.Component {
+class StreamList extends Component {
     componentDidMount() {
         this.props.fetchStreams();
     }
@@ -12,12 +12,8 @@ class StreamList extends React.Component {
         if (stream.userId === this.props.currentUserId) {
             return (
                 <div className="ui right floated">
-                    <button className="ui button primary">
-                        Edit
-                    </button>
-                    <button className='ui button negative'>
-                        Delete
-                    </button>
+                    <Link className='ui button primary' to={`/streams/edit/${stream.id}`}>Edit</Link>
+                    <Link className='ui button negative' to={`/streams/delete/${stream.id}`}>Delete</Link>
                 </div>
             );
         };
