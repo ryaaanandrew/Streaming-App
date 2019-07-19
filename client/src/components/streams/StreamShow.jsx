@@ -20,4 +20,4 @@ const mapStateToProps = (state, ownProps ) => {
     }
 };
 
-export default connect(null, { fetchStream })(StreamShow);
+export default connect(mapStateToProps, { fetchStream })(StreamShow);
