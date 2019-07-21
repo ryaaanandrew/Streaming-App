@@ -1,0 +1,25 @@
+{
+  "name": "streaming-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm start",
+    "rtmpserver": "cd rtmpserver && npm start",
+    "server": "cd server && npm start",
+    "start": "concurrently \"npm run server\" \"npm run rtmpserver\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryaaanandrew/Streaming-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryaaanandrew/Streaming-App/issues"
+  },
+  "homepage": "https://github.com/ryaaanandrew/Streaming-App#readme",
+  "dependencies": {
+    "concurrently": "^4.1.1"
+  }
+}
