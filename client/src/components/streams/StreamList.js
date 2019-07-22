@@ -33,7 +33,7 @@ const LinkList = styled.div`
     justify-content: space-between;
     align-items: center;
     border: 1px solid #d3d3d3;
-    box-shadow: 0px 3px 3px -1px rgba(143,143,143,.5)
+    box-shadow: 0px 3px 3px -1px rgba(143,143,143,.5);
 `
 const AdminButtonWrapper = styled.div`
     width: 15%;
@@ -48,6 +48,7 @@ const AdminButtonEdit = styled(Link)`
     border-radius: 5px;
     box-shadow: 0 4px 0 0 #4071ff;
     transition: all .2s;
+    font-family: 'Raleway', sans-serif;
 
     &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
@@ -63,12 +64,14 @@ const AdminButtonEdit = styled(Link)`
         box-shadow: none;
     }
 `
+
 const AdminButtonDelete = styled(Link)`
     padding: 15px 25px;
     color: white;
     border-radius: 5px;
     background-color: #ff5f71;
     box-shadow: 0 5px 0 0 #f84357;
+    font-family: 'Raleway', sans-serif;
 
     &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
@@ -81,6 +84,31 @@ const AdminButtonDelete = styled(Link)`
     &:active {
         transform: translateY(3px);
         box-shadow: none;
+    }
+`
+
+const AdminButtonCreate = styled(Link)`
+    display: inline-block;
+    padding: 15px 25px;
+    color: white;
+    border-radius: 5px;
+    background-color: #ff5f71;
+    box-shadow: 0 5px 0 0 #f84357;
+    font-family: 'Raleway', sans-serif;
+    transition: all .2s;
+
+    &:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+    color: white;
+    }
+
+    &:hover {
+        background-color: #ff7584;
+    }
+    &:active {
+        transform: translateY(3px);
+        box-shadow: none;
+    }
 `
 
 class StreamList extends Component {
@@ -118,10 +146,8 @@ class StreamList extends Component {
     renderCreate() {
         if (this.props.isSignedIn) {
             return (
-                <div style={{ textAlign: 'right' }}>
-                    <Link to="/streams/new" className='ui button primary'>
-                        Create Stream
-                    </Link>
+                <div>
+                    <AdminButtonCreate to="/streams/new"><i className="play icon" />Create Stream</AdminButtonCreate>
                 </div>
             );
         };

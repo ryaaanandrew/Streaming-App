@@ -1,7 +1,32 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
 import flv from 'flv.js';
 import { fetchStream } from '../../actions';
+
+const VideoContainer = styled.div`
+    margin-left: 4rem;
+    width: 80%;
+`
+
+const VideoContent = styled.div`
+    width: 90%;
+`
+
+const VideoHeader = styled.div`
+    font-size: 3rem;
+    padding: 2rem 3rem;
+`
+
+const VideoDescription = styled.p`
+    padding: 2rem 3rem;
+    border-top: 1px solid lightgrey;
+`
+
+const Video = styled.video`
+    width: 90%;
+`
+
 
 class StreamShow extends Component {
     constructor(props) {
@@ -48,11 +73,13 @@ class StreamShow extends Component {
         const { title, description } = this.props.stream;
 
         return (
-            <div>
-                <video ref={this.videoRef} style={{ width: '100%' }} controls/>
-                <h1>{title}</h1>
-                <h5>{description}</h5>
-            </div>
+            <VideoContainer>
+            <Video ref={this.videoRef} controls/>
+                <VideoContent>
+                    <VideoHeader>{title}</VideoHeader>
+                    <VideoDescription>{description}</VideoDescription>
+                </VideoContent>
+            </VideoContainer>
         );
     };
 };

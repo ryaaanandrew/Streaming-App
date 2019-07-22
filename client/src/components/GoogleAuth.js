@@ -21,6 +21,7 @@ const ButtonContainer = styled.div`
 `
 
 const ButtonText = styled.p`
+    font-family: 'Raleway', sans-serif;
     float: right;
     margin-left: 10px;
 `

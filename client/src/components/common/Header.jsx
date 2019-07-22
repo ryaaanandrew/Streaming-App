@@ -10,7 +10,7 @@ const HeaderContainer = styled.header`
     width: 100%;
     height: 5rem;
     padding: 3.5rem 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     background-color: #24292e;
     box-shadow: 0px 5px 6px -2px rgba(143,143,143,1);
 
