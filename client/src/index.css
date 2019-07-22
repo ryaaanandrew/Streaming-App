@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:300|Roboto+Mono:300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial;
 }
 
 *,
@@ -13,6 +16,8 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; 
     /* 1rem = 10px, 10px/16px = 62.5% */
-
 }
 
+body {
+    font-family: 'Raleway', sans-serif;
+}

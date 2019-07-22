@@ -6,11 +6,11 @@ import styled from 'styled-components';
 import GoogleAuth from '../GoogleAuth';
 
 
-const StyledHeader = styled.header`
+const HeaderContainer = styled.header`
     width: 100%;
     height: 5rem;
     padding: 3.5rem 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     background-color: #24292e;
     box-shadow: 0px 5px 6px -2px rgba(143,143,143,1);
 
@@ -30,36 +30,41 @@ const StyledLink = styled(Link)`
 }
 `
 
-const StyledWrapperRight = styled.div`
+const WrapperRight = styled.div`
     display: flex;
-    width: 30rem;
+    width: 40rem;
     justify-content: space-between;
     align-items: center;
 `
 
-const StyledWrapperLeft = styled.div`
+const WrapperLeft = styled.div`
     align-items: center;
 `
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     height: 20rem;
+    margin-left: 4rem;
+`
+
+const HeaderText = styled.h1`
+    font-family: 'Roboto Mono', monospace;
 `
 
 const Header = () => {
     return (
-        <StyledHeader>
-            <StyledWrapperLeft>
+        <HeaderContainer>
+            <WrapperLeft>
                 <StyledLink to='/' className='item'>
                     <StyledFontAwesomeIcon icon={faPaperPlane} size='2x' />
                 </StyledLink>
-            </StyledWrapperLeft>
-            <StyledWrapperRight>
+            </WrapperLeft>
+            <WrapperRight>
                 <StyledLink to='/' className='item'>
-                    All Streams
+                    <HeaderText>All Streams</HeaderText>
                 </StyledLink>
                 <GoogleAuth />
-            </StyledWrapperRight>
-        </StyledHeader>
+            </WrapperRight>
+        </HeaderContainer>
     );
 };
 

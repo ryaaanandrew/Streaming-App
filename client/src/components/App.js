@@ -9,7 +9,6 @@ import { Header } from './common';
 import history from '../../src/history';
 
 class App extends React.Component {
-
     render() {
         return(
             <Router history={history}>

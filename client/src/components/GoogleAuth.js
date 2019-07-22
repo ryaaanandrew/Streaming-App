@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { signIn, signOut } from '../actions/';
 import styled from 'styled-components';
 
-const StyledButton = styled.div`
-    padding: 15px 50px;
+const ButtonContainer = styled.div`
+    padding: 1.5rem 3rem;
     border-radius: 5px;
     background-color: #fa243c;
     box-shadow: 0 5px 0 0 #DC001A;
@@ -18,6 +18,11 @@ const StyledButton = styled.div`
         transform: translateY(3px);
         box-shadow: none;
     }
+`
+
+const ButtonText = styled.p`
+    float: right;
+    margin-left: 10px;
 `
 
 class GoogleAuth extends Component {
@@ -58,17 +63,17 @@ class GoogleAuth extends Component {
             return null
         } else if ( this.props.isSignedIn ) {
             return (
-                <StyledButton onClick={this.onSignOutClick}>
+                <ButtonContainer onClick={this.onSignOutClick}>
                     <i className='google icon'/>
-                    Sign out
-                </StyledButton>
+                    <ButtonText>Sign out</ButtonText>
+                </ButtonContainer>
             )
         } else {
             return (
-                <StyledButton onClick={this.onSignInClick}>
+                <ButtonContainer onClick={this.onSignInClick}>
                     <i className='google icon'/>
-                    Sign in with Google
-                </StyledButton>
+                    <ButtonText>Sign in</ButtonText>
+                </ButtonContainer>
             )
         };
     } 
