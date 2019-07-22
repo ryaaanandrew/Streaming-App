@@ -1,7 +1,7 @@
 # Streamy McStreamy App
 
 
-A single page streaming app built using React/Redux/Oauth/JSON-server/rtmp & node media server
+A single page streaming app built using React/Redux/Oauth/JSON-server/rtmp/node media server & Styled-Components
 
 ### To use:
 1 Install dependencies in client, rtmpserver, server & root folders
