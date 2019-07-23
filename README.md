@@ -3,6 +3,13 @@
 
 A single page streaming app built using React/Redux/Oauth/JSON-server/rtmp/node media server & Styled-Components.
 
+# TODO
+- Styling
+- Switch back end to Go
+- Host
+- Internal User database
+- Refactor into hooks(?)
+
 Users can:
 - Create a stream
 - Save a stream
@@ -21,10 +28,3 @@ Users can:
 2. Go to settings > stream 
 3. Under service, choose custom
 4. Your stream key will be the route id 'http://localhost:3000/streams/show/1**
-
-# TODO
-- Styling
-- Switch back end to Go
-- Host
-- Internal User database
-- Refactor into hooks(?)
