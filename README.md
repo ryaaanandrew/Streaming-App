@@ -3,14 +3,14 @@
 
 A single page streaming app built using React/Redux/Oauth/JSON-server/rtmp/node media server & Styled-Components.
 
-# TODO
+### TODO
 - Styling
 - Switch back end to Go
 - Host
 - Internal User database
 - Refactor into hooks(?)
 
-Users can:
+### Users can:
 - Create a stream
 - Save a stream
 - Edit and Delete a stream
